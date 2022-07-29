@@ -20,7 +20,7 @@ nav {
   position: relative;
 }
 
-.navbar{
+.navbar {
   display: flex;
   width: 85%;
 }
@@ -62,7 +62,8 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-.menu, .close{
+.menu,
+.close {
   display: none;
 }
 
@@ -119,7 +120,7 @@ nav {
   margin-right: 2rem;
 }
 
-.text_box > .icon span{
+.text_box > .icon span {
   font-size: 24px;
   margin-right: 0.5rem;
   color: rgba(243, 125, 82, 0.952);
@@ -167,7 +168,7 @@ nav {
 .search::before {
   display: none;
 }
-.search > .icon span{
+.search > .icon span {
   color: rgb(255, 255, 255);
   margin-right: 0;
 }
@@ -329,7 +330,6 @@ nav {
   background-color: rgb(218, 165, 32);
 }
 
-
 /* TOUR SECTION */
 .mid_tours {
   position: relative;
@@ -482,7 +482,7 @@ nav {
   background-color: rgba(245, 164, 135, 0.89);
 }
 
-.tanzania{
+.tanzania {
   background-image: url(/images/tanzania.jpg);
 }
 
@@ -542,8 +542,8 @@ nav {
   box-shadow: 0 1px 10px 1px;
   border: 1px inset;
 }
-.like span{
-    font-size: 22px;
+.like span {
+  font-size: 22px;
 }
 .like:hover {
   transform: scale(1.1, 1.1);
@@ -592,7 +592,7 @@ nav {
   align-items: center;
   justify-items: left;
 }
-.cta_text .bottom_textbox{
+.cta_text .bottom_textbox {
   margin: 1rem;
 }
 .cta_text > .bottom h2 {
@@ -729,26 +729,31 @@ footer {
   text-transform: capitalize;
 }
 
-
-
 /* MEDIA QUERIES */
-@media screen and (max-width:600px){
-  *{
-    font-size: 95%;
+@media screen and (max-width: 961px){
+  nav{
+    font-size: 90%;
   }
 
-  body{
+  .nav_sign-up{
+    padding: 0.7rem 1.2rem;
+  }
+}
+@media screen and (max-width:880px){
+  
+  body {
     overflow-x: hidden;
   }
 
-  nav{
+  nav {
     margin: 1rem 2rem;
     justify-content: space-between;
+    position: static;
   }
 
-  .navbar{
+  .navbar {
     z-index: 1;
-    height: 105vh;
+    height: 100vh;
     width: 45vw;
     background-color: rgb(51, 51, 51, 0.9);
     flex-direction: column;
@@ -756,25 +761,22 @@ footer {
     justify-content: center;
     top: -2rem;
     right: 0;
-    transform: translateX(120%);
-    transition: ease-in-out 0.8s;
+    transform: translateY(-100%);
+    transition: all 0.8s;
     line-height: 7;
-    padding: 3rem 1.3rem;
+    padding: 1.3rem;
     position: absolute;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 5px 5px;
   }
-  .show{
-    transform: translateX(20%);
+  .show {
+    transform: translateY(0%);
   }
-
-  .nav_logo{
-    font-size: 18px;
-  }
-
-  .nav_links>ul{
+  
+  .nav_links > ul {
     flex-direction: column;
   }
-  .nav_links a, .nav_sign a {
+  .nav_links a,
+  .nav_sign a {
     color: rgb(255, 255, 255);
     opacity: 0.75;
   }
@@ -787,43 +789,37 @@ footer {
   .nav_sign {
     width: auto;
     position: relative;
-    bottom: -10%;
+    bottom: -5%;
   }
   .nav_sign a {
     margin: 0 0.5rem;
     opacity: 0.9;
   }
-  .nav_sign-up{
+  .nav_sign-up {
     padding: 0.6rem 0.8rem;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
   }
 
-  .menu{
+  .menu {
     display: block;
   }
-  .close, .menu{
-    position: absolute;
-    top: 5%;
-    right: 2%;
+  .close,
+  .menu {
     z-index: 1;
     color: rgb(125, 42, 232);
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.9s;
   }
-  .close:hover, .menu:hover{
-    cursor: pointer;
-  }
-
 
   /* TOP SECTION */
-  .top_section{
+  .top_section {
     margin: 1rem 2rem;
   }
 
-  .top_text{
+  .top_text {
     font-size: 21px;
   }
-  
-  .top_image-text{
+
+  .top_image-text {
     height: max-content;
     padding: 0.5rem 2rem;
     top: -2.2rem;
@@ -832,17 +828,10 @@ footer {
   }
 
   .text_box{
-    font-size: 65%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: max-content;
+    font-size: 80%;
   }
-  .text_box::before{
+  .text_box::before {
     display: none;
-  }
-  .text_box> .icon span{
-    font-size: 16px;
   }
   .text_box h4 {
     margin-top: 0;
@@ -850,16 +839,111 @@ footer {
   .text_box h5 {
     margin-bottom: 0;
   }
-  
-  .search{
-    width: 2rem;
-    height: 2rem;
+
+  .search {
+    right: 2%;
+    width: 3rem;
+    height: 3rem;
     border-radius: 70px;
   }
-  
+
+
+  /* MID PLACES */
+  .mid_places {
+    margin: 0 2rem 5rem;
+  }
+    .mid_places-images--box {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .canada {
+    grid-column: 1/5;
+    grid-row: 3/5;
+  }
+  .south-africa {
+    grid-column: 5/8;
+    grid-row: 3;
+  }
+  .china {
+    grid-column: 8/11;
+    grid-row: 3;
+  }
+  .new-york {
+    grid-column: 1/11;
+    grid-row: 1/3;
+  }
+  .london {
+    grid-column: 5/8;
+    grid-row: 4;
+  }
+  .kigali {
+    grid-column: 1/11;
+    grid-row: 5/7;
+  }
+  .paris-night {
+    grid-column: 8/11;
+    grid-row: 4;
+  }
+
+
+  /* TOURS SECTION */
+   .pre_btn {
+    right: 13%;
+  }
+  .next_btn {
+    right: 4%;
+  }
+
+
+  /* CTA */
+  .cta {
+    flex-direction: column;
+    margin: 1rem 2rem;
+  }
+  .cta_image,
+  .cta_text {
+    width: 100%;
+  }
+
+  .top_text{
+    margin: 0 auto;
+  }
+  .cta_text > .bottom {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 95%;
+  }
+
+  .nav_logo {
+    font-size: 18px;
+  }
+
+
+  /* TOP SECTION */
+  .text_box {
+    font-size: 65%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: max-content;
+  }
+  .text_box > .icon span {
+    font-size: 16px;
+  }
+
+  .search {
+    right: 4%;
+    width: 2rem;
+    height: 2rem;
+  }
+
 
   /* MID INFO SECTION */
-  .mid_info{
+  .mid_info {
     flex-direction: column;
     margin: 0 auto 3rem;
     font-size: 100%;
@@ -867,106 +951,86 @@ footer {
 
 
   /* MID PLACES SECTION */
-  .mid_places {
-    margin: 0 2rem 5rem;
-  }
-
-  .heading h2{
+  .heading h2 {
     font-size: 19px;
   }
-  .heading h4{
+  .heading h4 {
     font-size: 15px;
   }
-  
-  .mid_places-images--box{
+
+  .mid_places-images--box {
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: minmax(10rem, 100%);
   }
-  .canada{
+  .canada {
     grid-column: 1/8;
     grid-row: 1/3;
   }
-  .london{
+  .london {
     grid-column: 8/13;
     grid-row: 1;
   }
-  .china{
+  .china {
     grid-column: 8/13;
     grid-row: 2;
   }
-  .new-york{
+  .new-york {
     grid-column: 1/13;
     grid-row: 3;
   }
-  .south-africa{
+  .south-africa {
     grid-column: 1/7;
     grid-row: 4;
   }
-  .kigali{
+  .kigali {
     grid-column: 1/13;
     grid-row: 5;
   }
-  .paris-night{
+  .paris-night {
     grid-column: 7/13;
     grid-row: 4;
   }
 
 
   /* TOUR SECTION */
-  .mid_tours{
+  .mid_tours {
     margin: 2rem 0;
   }
 
-  .mid_tours .heading{
+  .mid_tours .heading {
     margin: 1rem 2rem;
   }
 
   .pre_btn,
-  .next_btn{
+  .next_btn {
     width: 2rem;
     height: 2rem;
     z-index: -1;
   }
-  .pre_btn {
-    right: 12%;
-  }
-  .next_btn {
-    right: 3%;
-  }
 
-  .card_box{
+  .card_box {
     margin-left: 1rem;
     padding: 0.8rem;
   }
 
-  .tour_card{
+  .tour_card {
     width: 18rem;
     height: 25rem;
   }
 
-  .rating{
+  .rating {
     width: 60%;
   }
 
 
   /* CTA */
-  .cta{
-    flex-direction: column;
-    margin: 1rem 2rem;
-  }
-  .cta_image, .cta_text{
-    width: 100%;
-  }
-
   .cta_text > .top_text {
     font-size: 22px;
   }
 
   .cta_text > .bottom{
-    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    text-align: center;
+    flex-direction: column;
   }
   .cta_text > .bottom h2 {
     font-size: 30px;
@@ -974,61 +1038,61 @@ footer {
 
 
   /* TESTIMONIALS */
-  .testimonials{
+  .testimonials {
     line-height: 1.2;
   }
 
-  .testimonial_heading > h2{
+  .testimonial_heading > h2 {
     font-size: 28px;
   }
 
-  .testimonial_body{
+  .testimonial_body {
     width: 65%;
   }
-  .testimonial_body .image{
+  .testimonial_body .image {
     width: 6rem;
     height: 6rem;
   }
-  .testimonial_body .img2{
+  .testimonial_body .img2 {
     height: 3.5rem;
     width: 3.5rem;
     top: 40%;
     right: 12%;
   }
-  .testimonial_body .img3{
+  .testimonial_body .img3 {
     height: 3rem;
     width: 3rem;
     top: 30%;
     right: 80%;
   }
-  .testimonial_body .img4{
+  .testimonial_body .img4 {
     height: 3rem;
     width: 3rem;
     top: 60%;
     left: 5%;
   }
-  .testimonial_body .img5{
+  .testimonial_body .img5 {
     height: 2rem;
     width: 2rem;
     left: 80%;
     top: 75%;
   }
-  .testimonial_body .img6{
+  .testimonial_body .img6 {
     display: none;
   }
 
 
   /* JINGLE */
-  .jingle{
+  .jingle {
     width: 80%;
     padding: 1.5rem 1rem;
   }
 
-  .jingle>h2{
+  .jingle > h2 {
     font-size: 27px;
     width: 100%;
   }
-  .jingle>p{
+  .jingle > p {
     width: 70%;
   }
 }

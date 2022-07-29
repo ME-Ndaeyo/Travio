@@ -1,4 +1,4 @@
-const navSlide = () =>{
+const navSlide = (() =>{
     const menu = document.querySelector('.menu');
     const nav = document.querySelector('.navbar');
     const close = document.querySelector('.close');
@@ -17,6 +17,5 @@ const navSlide = () =>{
             menu.style.display = "block"
         }
     });
-}
-
+});
 navSlide();
