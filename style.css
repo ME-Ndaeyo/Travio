@@ -809,6 +809,10 @@ footer {
     color: rgb(125, 42, 232);
     transition: ease-in-out 0.9s;
   }
+  .close:hover,
+  .menu:hover{
+    cursor: pointer;
+  }
 
   /* TOP SECTION */
   .top_section {
